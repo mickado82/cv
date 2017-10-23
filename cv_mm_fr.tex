@@ -28,6 +28,14 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+\usepackage{xcolor}
+
+%COlor used for technical words in cv entries
+\definecolor{technik}{rgb}{0.5,0.5,0.5}
+%Length used before the items of the different CV entries
+\newlength{\preitemlength}
+\setlength{\preitemlength}{4pt}
+
 % personal data
 \name{Mickaël}{Morin}
 \title{Ingénieur Dévelopement Java JEE}                               % optional, remove / comment the line if not wanted
@@ -63,67 +71,76 @@
 \subsection{Missions en entreprise}
 
 \cventry[1em]{2016--2017}{Consultant Big Data}{Infotel}{Paris}{Enedis}{Audits au sein du pôle données\newline{}%
-\textit{Java, GWT, Teradata, SQL, Shell}
+\textit{\textcolor{technik}{Java, GWT, Teradata, SQL, Shell}}
+\vspace{\preitemlength}
 \begin{itemize}%
 	\item Audit performance d'analyse de l'architecture Big Data en place en vue de dégager des pistes d'amélioration. 
 	\item Audit trajectoire afin d'optimiser les moyens techniques du traitement de la donnée au regard des futurs besoins du pôle données Enedis.
 \end{itemize}}
 
 \cventry[1em]{2016--2017}{Concepteur / Développeur}{Infotel}{Paris}{Mission pour l'OEB}{Refonte d'une plateforme d'ETL: Conversion PDF vers image et chargement dans une plateforme d'Object storage (Scality Ring) \newline{}%
-\textit{Scala, Akka, Doobie, Scalatra, Apache Camel, Scalatra}
+\textit{\textcolor{technik}{Scala, Akka, Doobie, Scalatra, Apache Camel}}
+\vspace{\preitemlength}
 \begin{itemize}%
 	\item Étude des différentes solutions techniques, approche massivement parallèle et purement fonctionnelle 
 	\item Conception et mise en place des différents composants (framework web, topologie d'acteurs, DAO, Bibliothèques de conversion)
 \end{itemize}}
 
 \cventry[1em]{2014--2016}{Concepteur / Développeur Java JEE}{Infotel}{Paris}{Mission pour l'OEB}{Maintenance évolutive d'une plateforme de stockage massif de documents : API REST HATEOAS permettant des opération CRUD dans un environement Big Data\newline{}%
-\textit{Java, Groovy, Spark, Shell, Apache Camel, Spring, MongDB}
+\textit{\textcolor{technik}{Java, Groovy, Spark, Shell, Apache Camel, Spring, MongDB}}
+\vspace{\preitemlength}
 \begin{itemize}%
 	\item Implémentation de jobs Spark d'alignement des données avec un référentiel extérieur (DB2)
 	\item Développement d'extensions de l'API 
-	\item Support des montées en version des différentes versions de Mongo DB
+	\item Support des montées en version de la base de données Mongo DB
 	\item Implémentation et extension de routes Camel de chargement et de reporting   
 	\item Conception et implémentation de routines de transfert et de modification de collections Mongo DB 
 \end{itemize}}
 
 \cventry[1em]{2013--2014}{Concepteur / Développeur Java JEE}{Infotel}{Den Haag}{Mission pour l'OEB}{Réalisation d'une plateforme de suivi de documents au sein du SI du client\newline{}%
-\textit{Java, Spring}
+\textit{\textcolor{technik}{Java, Spring}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Analyse des différents silos et définition d'une solution technique
 		\item Implémentation et déploiement sous forme d'un POC
 \end{itemize}}
 
 \cventry[1em]{2013}{Développeur Java JEE}{Infotel}{Paris}{Mission pour l'OEB}{Implémentation d'un algorithme distribué de rapprochement de documents\newline{}%
-\textit{Spring, Jersey, Hadoop, MongoDB}
+\textit{\textcolor{technik}{Spring, Jersey, Hadoop, MongoDB}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Implémentation du frontfile constitué d'un Web Service REST
 		\item Conception et mise en place de jobs Map Reduce de traitement du backfile
 \end{itemize}}
 
 \cventry[1em]{2013}{Concepteur / Développeur Java JEE}{Infotel}{Paris}{Mission pour l'OEB}{Conception et implémentation de process de conversion et de chargement de documents \newline{}%
-\textit{Groovy, Shell, parallel processing}
+\textit{\textcolor{technik}{Groovy, Shell, parallel processing}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Conversion XML et SGML vers PDF
 \end{itemize}}
 
-\cventry[1em]{2012--2013}{Développeur Java JEE}{Infotel}{Paris}{Mission pour l'OEB}{Maintenance évolutive d'un système ETL ainsi que de l'IHM associée \newline{}%
-\textit{Java, Spring, JQuery, Hibernate}
+\cventry[1em]{2012--2013}{Développeur Java JEE}{Infotel}{Paris}{Mission pour l'OEB}{Maintenance évolutive d'un système d'ETL ainsi que de l'IHM associée \newline{}%
+\textit{\textcolor{technik}{Java, Spring, JQuery, Hibernate}}
+\vspace{\preitemlength}
 \begin{itemize}%
-		\item Développement d'un module d'échange de fichiers(FTP) 
-		\item Réalisation de nouveaux composants, dédiés à de nouveaux formats de fichiers
+		\item Développement d'un module d'échange de fichiers (FTP) 
+		\item Réalisation de nouveaux composants pour diversifier les formats de fichiers gérés
 		\item Extension de l'interface graphique
 		\item Migration CVS vers SVN et JBoss 4 vers JBOSS 6 
 		\item Tests unitaires, intégration continue
 \end{itemize}}
 
 \cventry[1em]{2011--2012}{Développeur Java JEE}{Infotel}{Paris}{Mission pour PSA}{Maintenance évolutive d'une plateforme après vente \newline{}%
-\textit{Java, Struts, CVS, Oracle}
+\textit{\textcolor{technik}{Java, Struts, CVS, Oracle}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Développement de batchs
 		\item Conception et documentation
 		\item Test unitaires, tests d'intégration
 \end{itemize}}
 
+%\clearpage
 \subsection{R\&D, veille et encadrement technique}
 
 \cventry[1em]{2015--2017}{Consultant}{Infotel}{Paris}{}{Veille et animation technique
@@ -148,44 +165,49 @@ Kubernetes, Spark, AWS, CoreOS, Elasticsearch)
 }
 
 \subsection{Expérience freelance}
-\cventry[1em]{2017}{Direction technique}{DOOHA SAS}{}{}{Conception, implémentation et déploiement de la plateforme IKOMO permettant des réservations temps-réel d'espaces publicitaires physiques via le Web. Diffusion des médias des clients sur un vingtaine d'écrans connectés\newline{}%
-\textit{Grails 3, AWS, Python, GORM, Postgre SQL, Redis, Git, devop, CSS, HTML, AngularJS, Bootstrap, intégration continue, Haute disponibilité, méthodes agiles}
+\cventry[1em]{2017}{Direction technique}{DOOHA SAS}{}{}{Conception, implémentation et déploiement de la plateforme IKOMO permettant des réservations temps-réel d'espaces publicitaires physiques via le Web. Diffusion des médias des clients sur une vingtaine d'écrans connectés\newline{}%
+\textit{\textcolor{technik}{Grails 3, AWS, Python, GORM, Postgre SQL, Redis, Git, devop, CSS, HTML, AngularJS, Bootstrap, intégration continue, Haute disponibilité, méthodes agiles}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Conception des plateformes d'administration, de diffusion et de programmation
 		\item Définition du modèle de données
 		\item Création des environnements et des configurations réseau sur AWS
 		\item Mise en place de serveurs de CI Jenkins
 		\item Réalisation des interfaces avec les régies publicitaires externes
-		\item Implémentation des routine automatiques de maintenance via AWS Lambda 
-		\item Suivi des taches et gestion du dévelopement de l'applicatif (Releases, hotfixes ...)
+		\item Implémentation des routines automatiques de maintenance via AWS Lambda 
+		\item Suivi des tâches et gestion du développement de l'applicatif (Releases, hotfixes ...)
 		\item Tests de performance et de montée en charge
 \end{itemize}}
 
 \cventry[1em]{2015--2017}{Direction technique}{Lakay SAS}{}{}{Conception, implémentation, maintenance et évolution d’une application Web dans le domaine de la vente matérielle à haute fréquence de produits éphémères 24h/24h. \newline{}%
-\textit{Grails 3, AWS, GORM, Git, Memcache, devop, CSS, HTML, AngularJS, Bootstrap, Haute disponibilité, Android}
+\textit{\textcolor{technik}{Grails 3, AWS, GORM, Git, Memcache, devop, CSS, HTML, AngularJS, Bootstrap, Haute disponibilité, Android}}
+\vspace{\preitemlength}
 \begin{itemize}%
 		\item Création de la base et du modèle de données
 		\item Tests de performance
 		\item Déploiement sur AWS
 		\item Réalisation de l'interface graphique
+		\item Évolutions de l'application mobile associée (Android) 
 \end{itemize}}
 
 \section{Formations}
-\cventry{2015}{Cassandra pour les développeurs}{Datastax}{Paris}{}{}
+\cventry{2015}{Cassandra pour les partenaires}{Datastax}{Paris}{}{}
 \cventry{2014}{Mongo DB pour les développeurs}{10gen}{Online}{}{}
 \cventry{2011}{Java JEE}{Infotel}{Paris}{}{}
 
 \section{Stages}
 \cventry[1em]{2010}{Stagiaire développement}{Bertin Technologies}{Paris}{}{Stage de fin d'études : Développement d'un module de calcul des performances d'un moteur fusée chimique\newline{}
-\textit{C, Fortran, Linux, Windows, Valgrind, GNU Profiler} \LaTeX
+\textcolor{technik}{\textit{C, Fortran, Linux, Windows, Valgrind, GNU Profiler, \LaTeX}}
+\vspace{\preitemlength}
 \begin{itemize}
 \item Audit de codes scientifiques
 \item Rédaction d'un dossier de conception
-\item Développement du module et intégration au sein d'une plateforme d'optimisation de lanceurs
+\item Développement du module et intégration au sein d'une plateforme d'optimisation de lanceurs spatiaux
 \end{itemize}}
 
 \cventry[1em]{2009}{Stagiaire développement}{Laboratoire M2S}{Rennes}{}{Stage de Master : Algorithme de calcul du moment cinetique dans le sport \newline{}
-\textit{Matlab, Windows, } \LaTeX
+\textcolor{technik}{\textit{Matlab, Windows, } \LaTeX}
+\vspace{\preitemlength}
 \begin{itemize}
 \item Bibliographie
 \item Adaptation d'un modèle 3D vers une projection 2D  
@@ -193,7 +215,8 @@ Kubernetes, Spark, AWS, CoreOS, Elasticsearch)
 \end{itemize}}
 
 \cventry[1em]{2007}{Stagiaire développement}{IFREMER}{Brest}{}{Stage de Licence : Modélisation des écoulements de sédiments sous-marins sur les pentes océaniques \newline{}
-\textit{Matlab, Windows, } \LaTeX
+\textcolor{technik}{\textit{Matlab, Windows, } \LaTeX}
+\vspace{\preitemlength}
 \begin{itemize}
 \item Bibliographie
 \item Amélioration d'un modèle "une dimension verticale" d'écoulement d'un liquide non newtonien 
@@ -202,7 +225,7 @@ Kubernetes, Spark, AWS, CoreOS, Elasticsearch)
 
 
 \section{Education}
-\cventry{2008--2010}{Master}{UFR Sciences}{Rennes I}{}{Modélisation et calcul scientifique}  % arguments 3 to 6 can be left empty
+\cventry{2008--2010}{Master 2}{UFR Sciences}{Rennes I}{}{Modélisation et calcul scientifique}  % arguments 3 to 6 can be left empty
 \cventry{2004--2008}{Licence}{UFR Sciences}{Rennes I}{}{Licence physique}
 
 \section{Languages}
@@ -212,7 +235,7 @@ Kubernetes, Spark, AWS, CoreOS, Elasticsearch)
 
 \section{Compétences}
 \cvdoubleitem{Langages}{Java, Groovy, Scala, js, C/C++}{SGBDs}{PostgreSQL, MongoDB, Redis}
-\cvdoubleitem{Frameworks}{Grails, Spring, Struts, Hibernate, Hadoop, Spark}{Outils}{\LaTeX, Matlab, MS office, AWS}
+\cvdoubleitem{Frameworks}{Grails, Spring, Struts, Hibernate, Hadoop, Spark}{Outils}{\LaTeX, Matlab, MS office, AWS, Jenkins, Maven, Gradle}
 \cvdoubleitem{OS}{Linux, MS Windows}{}{}
 
 \section{Intérêts et hobbies}
